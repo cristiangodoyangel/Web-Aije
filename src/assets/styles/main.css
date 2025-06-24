@@ -1,0 +1,27 @@
+/* Paleta de colores principal */
+:root {
+  --color-negro: #111111;
+  --color-rojo: #e10600;
+  --color-gris: #d1d1d1;
+  --color-blanco: #fff;
+}
+
+body {
+  background: var(--color-negro);
+  color: var(--color-gris);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-blanco);
+  font-weight: 700;
+}
+
+a {
+  color: var(--color-rojo);
+  text-decoration: none;
+}
+
+/* Otros estilos base para layout premium */
