@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiSettings, FiDroplet, FiTool, FiWind, FiZap, FiAlertCircle, FiCpu, FiRefreshCcw, FiPackage, FiSliders, FiUserCheck } from 'react-icons/fi';
+import { themeVars } from '../theme';
 
 const servicios = [
   {
@@ -77,22 +78,24 @@ const servicios = [
   },
 ];
 
-export default function Home() {
+export default function Home({ theme = 'dark' }) {
+  const colors = themeVars[theme] || themeVars.dark;
   return (
-    <div style={{background:'#181818', minHeight:'100vh', paddingBottom:'2rem'}}>
+    <div style={{background: colors.background, minHeight:'100vh', paddingBottom:'2rem', color: colors.text}}>
       {/* HERO MINIMALISTA */}
       <section
         style={{
-          minHeight: '41vh',
+          minHeight: '38vh',
           background: `url('/assets/img/hero.png') center/cover no-repeat`,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
           padding: '3.8rem 2rem 1.5rem 2rem',
-          color: '#fff',
-          borderBottom: '1px solid #232323',
+          color: theme === 'dark' ? '#fff' : '#222',
+          borderBottom: theme === 'dark' ? '1px solid #232323' : '1px solid #e2e2e2',
           borderRadius: '0 0 24px 24px',
+          backgroundColor: theme === 'dark' ? 'transparent' : '#e6e6e6',
         }}
       >
       </section>
@@ -188,19 +191,19 @@ export default function Home() {
 
          {/* CONTACTO Y UBICACIÓN */}
          <section style={{maxWidth:1100, margin:'0 auto', padding:'3.5rem 0 1rem 0'}}>
-          <div style={{background:'#202124', borderRadius:18, boxShadow:'0 2px 18px #0004', padding:'2.5rem 2rem', display:'flex', flexWrap:'wrap', gap:'2.5rem', justifyContent:'space-between', alignItems:'stretch'}}>
+          <div style={{background: colors.sectionBg, borderRadius:18, boxShadow:'0 2px 18px #0004', padding:'2.5rem 2rem', display:'flex', flexWrap:'wrap', gap:'2.5rem', justifyContent:'space-between', alignItems:'stretch'}}>
             <div style={{flex:'1 1 350px', minWidth:260, display:'flex', flexDirection:'column', justifyContent:'center'}}>
-              <h2 style={{color:'#fff', fontSize:'2rem', fontWeight:700, marginBottom:'1.1rem', letterSpacing:'-1px'}}>CONTACTO</h2>
-              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>Email:</b> <a href="mailto:adm.talleresaje@gmail.com" style={{color:'#e10600', textDecoration:'none'}}>adm.talleresaje@gmail.com</a></div>
-              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>WhatsApp:</b> <a href="https://wa.me/56948572202" style={{color:'#e10600', textDecoration:'none'}}>+56 9 4857 2202</a></div>
-              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>Empresa:</b> Aje Servicios Integrales</div>
-              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'1.1rem'}}><b>Dirección:</b> Llanquihue 3932, Antofagasta</div>
+              <h2 style={{color: colors.heroText, fontSize:'2rem', fontWeight:700, marginBottom:'1.1rem', letterSpacing:'-1px'}}>CONTACTO</h2>
+              <div style={{color: colors.cardText, fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>Email:</b> <a href="mailto:contacto@aije.cl" style={{color: colors.buttonBg, textDecoration:'none'}}>adm.talleresaje@gmail.com</a></div>
+              <div style={{color: colors.cardText, fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>WhatsApp:</b> <a href="https://wa.me/56948572202" style={{color: colors.buttonBg, textDecoration:'none'}}>+56 9 4857 2202</a></div>
+              <div style={{color: colors.cardText, fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>Empresa:</b> Aje Servicios Integrales</div>
+              <div style={{color: colors.cardText, fontSize:'1.1rem', marginBottom:'1.1rem'}}><b>Dirección:</b> Llanquihue 3932, Antofagasta</div>
               <form style={{display:'flex', flexDirection:'column', gap:'1rem', marginTop:'0.2rem'}} onSubmit={e => {e.preventDefault(); alert('¡Mensaje enviado!');}}>
-                <input type="text" placeholder="Nombre y Apellido" required style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none'}} />
-                <input type="email" placeholder="Correo Electrónico" required style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none'}} />
-                <input type="text" placeholder="WhatsApp" required style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none'}} />
-                <textarea placeholder="Mensaje" required rows={3} style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none', resize:'vertical', minHeight:'60px'}} />
-                <button type="submit" style={{padding:'0.9rem', borderRadius:8, border:'none', background:'#e10600', color:'#fff', fontWeight:600, fontSize:'1.1rem', letterSpacing:'1px', boxShadow:'0 2px 12px #e1060022', cursor:'pointer', transition:'background 0.2s'}}>Enviar</button>
+                <input type="text" placeholder="Nombre y Apellido" required style={{padding:'0.8rem', borderRadius:8, border:`1.5px solid ${colors.inputBorder}`, background:colors.inputBg, color:colors.inputText, fontSize:'1.07rem', outline:'none'}} />
+                <input type="email" placeholder="Correo Electrónico" required style={{padding:'0.8rem', borderRadius:8, border:`1.5px solid ${colors.inputBorder}`, background:colors.inputBg, color:colors.inputText, fontSize:'1.07rem', outline:'none'}} />
+                <input type="text" placeholder="WhatsApp" required style={{padding:'0.8rem', borderRadius:8, border:`1.5px solid ${colors.inputBorder}`, background:colors.inputBg, color:colors.inputText, fontSize:'1.07rem', outline:'none'}} />
+                <textarea placeholder="Mensaje" required rows={3} style={{padding:'0.8rem', borderRadius:8, border:`1.5px solid ${colors.inputBorder}`, background:colors.inputBg, color:colors.inputText, fontSize:'1.07rem', outline:'none', resize:'vertical', minHeight:'60px'}} />
+                <button type="submit" style={{padding:'0.9rem', borderRadius:8, border:'none', background:colors.buttonBg, color:colors.buttonText, fontWeight:600, fontSize:'1.1rem', letterSpacing:'1px', boxShadow:`0 2px 12px ${colors.buttonShadow}`, cursor:'pointer', transition:'background 0.2s'}}>Enviar</button>
               </form>
             </div>
             <div style={{flex:'1 1 370px', minWidth:260, maxWidth:510, display:'flex', alignItems:'center'}}>
