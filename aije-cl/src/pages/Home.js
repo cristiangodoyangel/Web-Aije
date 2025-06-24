@@ -38,9 +38,7 @@ const servicios = [
     icono: <FiUserCheck color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
     descripcion: 'Asesoría profesional para compra y revisión de vehículos.'
   },
-  {
-    descripcion: 'Fabricación y ajuste de piezas y estructuras a medida.'
-  },
+
   {
     nombre: 'Afinamiento',
     icono: <FiSliders color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
@@ -154,34 +152,30 @@ export default function Home({ theme = 'dark' }) {
           }}>
             {servicios.map((serv, idx) => (
               <div
-                key={idx}
+                key={serv.nombre}
                 style={{
-                  background:'#191919',
-                  borderRadius:'13px',
-                  border:'1.5px solid #232323',
-                  padding:'2.2rem 1.2rem 1.6rem 1.2rem',
-                  color:'#fff',
-                  textAlign:'center',
-                  transition:'box-shadow 0.18s, border 0.18s',
-                  boxShadow:'0 1px 7px #0004',
-                  minHeight:'190px',
-                  display:'flex',
-                  flexDirection:'column',
-                  alignItems:'center',
-                  justifyContent:'center',
-                  cursor:'default',
-               
-            }}
-            onMouseOver={e => {
-              e.currentTarget.style.boxShadow = '0 0 10px 4px #fff9, 0 2px 10px #0002';
-            }}
-            onMouseOut={e => {
-              e.currentTarget.style.boxShadow = '0 2px 14px #0002';
-            }}
+                  background: colors.cardBg,
+                  borderRadius: 14,
+                  boxShadow: '0 2px 12px #0003',
+                  padding: '1.5rem 1.3rem',
+                  minWidth: 210,
+                  flex: '1 1 240px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  gap: '0.7rem',
+                  transition: 'background 0.3s',
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.boxShadow = '0 0 10px 4px #fff9, 0 2px 10px #0002';
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.boxShadow = '0 2px 14px #0002';
+                }}
               >
                 <div style={{fontSize:'2.3rem', marginBottom:'0.5rem', color:'#e10600'}}>{serv.icono}</div>
-                <div style={{fontWeight:500, fontSize:'1.07rem', marginBottom:'0.45rem', letterSpacing:'-0.5px'}}>{serv.nombre}</div>
-                <div style={{fontSize:'0.98rem', color:'#b8b8b8', fontWeight:300, lineHeight:1.4}}>{serv.descripcion}</div>
+                <div style={{fontWeight:500, fontSize:'1.07rem', marginBottom:'0.45rem', letterSpacing:'-0.5px', color: colors.cardText}}>{serv.nombre}</div>
+                <div style={{fontSize:'0.98rem', color: colors.cardText, fontWeight:300, lineHeight:1.4}}>{serv.descripcion}</div>
               </div>
             ))}
           </div>

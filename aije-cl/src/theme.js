@@ -1,6 +1,8 @@
 // Paleta de colores para modo claro y oscuro
 export const themeVars = {
   dark: {
+    cardBg: '#232323',
+    cardText: '#eee',
     background: '#181818',
     text: '#fff',
     card: '#202124',
@@ -20,6 +22,8 @@ export const themeVars = {
     sectionBg: '#202124',
   },
   light: {
+    cardBg: '#bdbdbd',
+    cardText: '#111',
     background: '#f6f6f6',
     text: '#181818',
     card: '#fff',
