@@ -141,31 +141,7 @@ export default function Home() {
 
         {/* GRID DE SERVICIOS MINIMALISTA */}
 
-        {/* CONTACTO Y UBICACIÓN */}
-        <section style={{maxWidth:1100, margin:'0 auto', padding:'3.5rem 0 1rem 0'}}>
-          <div style={{background:'#202124', borderRadius:18, boxShadow:'0 2px 18px #0004', padding:'2.5rem 2rem', display:'flex', flexWrap:'wrap', gap:'2.5rem', justifyContent:'space-between', alignItems:'center'}}>
-            <div style={{flex:'1 1 320px', minWidth:260}}>
-              <h2 style={{color:'#fff', fontSize:'2rem', fontWeight:600, marginBottom:'1.1rem', letterSpacing:'-1px'}}>Contacto</h2>
-              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.7rem'}}><b>Teléfono:</b> <a href="tel:+56912345678" style={{color:'#e10600', textDecoration:'none'}}>+56 9 1234 5678</a></div>
-              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.7rem'}}><b>Email:</b> <a href="mailto:contacto@premiumautoservice.cl" style={{color:'#e10600', textDecoration:'none'}}>contacto@premiumautoservice.cl</a></div>
-              <div style={{color:'#eee', fontSize:'1.1rem'}}><b>Dirección:</b> Av. Las Industrias 1234, Santiago, Chile</div>
-            </div>
-            <div style={{flex:'1 1 370px', minWidth:260, maxWidth:510}}>
-              <div style={{borderRadius:14, overflow:'hidden', boxShadow:'0 2px 14px #0006'}}>
-                <iframe
-                  title="Mapa Premium Auto Service"
-                  src="https://www.google.com/maps?q=-33.45694,-70.64827&z=15&output=embed"
-                  width="100%"
-                  height="260"
-                  style={{border:0, width:'100%', minHeight:'220px'}}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         <section style={{maxWidth:1100, margin:'0 auto', padding:'3rem 0 1rem 0'}}>
           <div style={{
@@ -205,6 +181,42 @@ export default function Home() {
                 <div style={{fontSize:'0.98rem', color:'#b8b8b8', fontWeight:300, lineHeight:1.4}}>{serv.descripcion}</div>
               </div>
             ))}
+          </div>
+
+          
+        </section>
+
+         {/* CONTACTO Y UBICACIÓN */}
+         <section style={{maxWidth:1100, margin:'0 auto', padding:'3.5rem 0 1rem 0'}}>
+          <div style={{background:'#202124', borderRadius:18, boxShadow:'0 2px 18px #0004', padding:'2.5rem 2rem', display:'flex', flexWrap:'wrap', gap:'2.5rem', justifyContent:'space-between', alignItems:'stretch'}}>
+            <div style={{flex:'1 1 350px', minWidth:260, display:'flex', flexDirection:'column', justifyContent:'center'}}>
+              <h2 style={{color:'#fff', fontSize:'2rem', fontWeight:700, marginBottom:'1.1rem', letterSpacing:'-1px'}}>CONTACTO</h2>
+              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>Email:</b> <a href="mailto:adm.talleresaje@gmail.com" style={{color:'#e10600', textDecoration:'none'}}>adm.talleresaje@gmail.com</a></div>
+              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>WhatsApp:</b> <a href="https://wa.me/56948572202" style={{color:'#e10600', textDecoration:'none'}}>+56 9 4857 2202</a></div>
+              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'0.5rem'}}><b>Empresa:</b> Aje Servicios Integrales</div>
+              <div style={{color:'#eee', fontSize:'1.1rem', marginBottom:'1.1rem'}}><b>Dirección:</b> Llanquihue 3932, Antofagasta</div>
+              <form style={{display:'flex', flexDirection:'column', gap:'1rem', marginTop:'0.2rem'}} onSubmit={e => {e.preventDefault(); alert('¡Mensaje enviado!');}}>
+                <input type="text" placeholder="Nombre y Apellido" required style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none'}} />
+                <input type="email" placeholder="Correo Electrónico" required style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none'}} />
+                <input type="text" placeholder="WhatsApp" required style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none'}} />
+                <textarea placeholder="Mensaje" required rows={3} style={{padding:'0.8rem', borderRadius:8, border:'1.5px solid #444', background:'#18191a', color:'#fff', fontSize:'1.07rem', outline:'none', resize:'vertical', minHeight:'60px'}} />
+                <button type="submit" style={{padding:'0.9rem', borderRadius:8, border:'none', background:'#e10600', color:'#fff', fontWeight:600, fontSize:'1.1rem', letterSpacing:'1px', boxShadow:'0 2px 12px #e1060022', cursor:'pointer', transition:'background 0.2s'}}>Enviar</button>
+              </form>
+            </div>
+            <div style={{flex:'1 1 370px', minWidth:260, maxWidth:510, display:'flex', alignItems:'center'}}>
+              <div style={{borderRadius:14, overflow:'hidden', boxShadow:'0 2px 14px #0006', width:'100%'}}>
+                <iframe
+                  title="Mapa Aje Servicios Integrales"
+                  src="https://www.google.com/maps?q=-23.6583289,-70.4007852&z=17&output=embed"
+                  width="100%"
+                  height="320"
+                  style={{border:0, width:'100%', minHeight:'220px'}}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </section>
       </div>
