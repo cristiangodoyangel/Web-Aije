@@ -83,8 +83,8 @@ export default function Home() {
       {/* HERO MINIMALISTA */}
       <section
         style={{
-          minHeight: '36vh',
-          background: `url('/assets/img/hero.png') center/contain no-repeat`,
+          minHeight: '41vh',
+          background: `url('/assets/img/hero.png') center/cover no-repeat`,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
