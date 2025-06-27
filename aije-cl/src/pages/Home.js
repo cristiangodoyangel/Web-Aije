@@ -6,98 +6,103 @@ const servicios = [
   {
     nombre: 'Mecánica Premium',
     icono: <FiSettings color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Mantención, reparación y diagnóstico para autos de alta gama con tecnología avanzada.'
+    descripcion: 'Mantención, reparación y diagnóstico para autos de alta gama con tecnología avanzada.',
+    img: '/assets/img/gama.jpg'
   },
   {
     nombre: 'Mecánica General',
     icono: <FiTool color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Reparaciones y soluciones mecánicas para todo tipo de vehículos.'
+    descripcion: 'Reparaciones y soluciones mecánicas para todo tipo de vehículos.',
+    img: '/assets/img/mecanic.jpg'
   },
   {
     nombre: 'Escáner Automotriz',
     icono: <FiCpu color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Diagnóstico computarizado y escaneo de sistemas electrónicos.'
+    descripcion: 'Diagnóstico computarizado y escaneo de sistemas electrónicos.',
+    img: '/assets/img/scanner.jpg'
   },
   {
     nombre: 'Regeneración DPF Electrónica',
     icono: <FiRefreshCcw color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Limpieza y regeneración de filtros de partículas diésel (DPF).'
+    descripcion: 'Limpieza y regeneración de filtros de partículas diésel (DPF).',
+    img: '/assets/img/dpf.jpg'
   },
   {
     nombre: 'Fabricación de Piezas',
     icono: <FiPackage color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Fabricación y ajuste de piezas y estructuras a medida.'
+    descripcion: 'Fabricación y ajuste de piezas y estructuras a medida.',
+    img: '/assets/img/piezas.jpg'
   },
   {
     nombre: 'Afinamiento',
     icono: <FiSliders color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Optimización y ajuste de motor para máximo rendimiento.'
+    descripcion: 'Optimización y ajuste de motor para máximo rendimiento.',
+    img: '/assets/img/afinamiento.jpg'
   },
   {
     nombre: 'Servicio de Asesoría',
     icono: <FiUserCheck color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Asesoría profesional para compra y revisión de vehículos.'
+    descripcion: 'Asesoría profesional para compra y revisión de vehículos.',
+    img: '/assets/img/asesoria.jpg'
   },
 
-  {
-    nombre: 'Afinamiento',
-    icono: <FiSliders color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Optimización y ajuste de motor para máximo rendimiento.'
-  },
-  {
-    nombre: 'Servicio de Asesoría',
-    icono: <FiUserCheck color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Asesoría profesional para compra y revisión de vehículos.'
-  },
+
   {
     nombre: 'Pintura de Alta Gama',
     icono: <FiDroplet color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Acabados de pintura premium, detailing y protección para vehículos exclusivos.'
+    descripcion: 'Acabados de pintura premium, detailing y protección para vehículos exclusivos.',
+    img: '/assets/img/pintura.jpg'
   },
   {
     nombre: 'Diagnóstico Avanzado',
     icono: <FiTool color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Equipos de escaneo y diagnóstico electrónico para todas las marcas de lujo.'
+    descripcion: 'Equipos de escaneo y diagnóstico electrónico para todas las marcas de lujo.',
+    img: '/assets/img/avanzado.jpg'
   },
   {
     nombre: 'Aire Acondicionado',
     icono: <FiWind color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Servicio y reparación de climatización para máximo confort en tu auto premium.'
+    descripcion: 'Servicio y reparación de climatización para máximo confort en tu auto premium.',
+    img: '/assets/img/aire.jpg'
   },
   {
     nombre: 'Soldadura Especializada',
     icono: <FiZap color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Soldaduras finas y estructurales, restauración de partes y piezas exclusivas.'
+    descripcion: 'Soldaduras finas y estructurales, restauración de partes y piezas exclusivas.',
+    img: '/assets/img/soldadura.jpg'
   },
   {
     nombre: 'Asistencia en Ruta',
     icono: <FiAlertCircle color="#e10600" size="2.3rem" style={{strokeWidth: 0.8, opacity: 0.7}} />,
-    descripcion: 'Rescate, grúa y asistencia rápida para vehículos de alta gama.'
+    descripcion: 'Rescate, grúa y asistencia rápida para vehículos de alta gama.',
+    img: '/assets/img/asistencia.jpg'
   },
 ];
 
 export default function Home({ theme = 'dark' }) {
   const colors = themeVars[theme] || themeVars.dark;
   return (
-    <div style={{background: colors.background, minHeight:'100vh', paddingBottom:'2rem', color: colors.text}}>
+    <div style={{background: colors.background, minHeight:'50vh', paddingBottom:'2rem', color: colors.text}}>
       {/* HERO MINIMALISTA */}
       <section
         style={{
-          minHeight: '38vh',
-          background: `url('/assets/img/hero.png') center/cover no-repeat`,
+          minHeight: '50vh',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          padding: '3.8rem 2rem 1.5rem 2rem',
+          padding: '0.5rem 0',
           color: theme === 'dark' ? '#fff' : '#222',
-          borderBottom: theme === 'dark' ? '1px solid #232323' : '1px solid #e2e2e2',
-          borderRadius: '0 0 24px 24px',
+         
           backgroundColor: theme === 'dark' ? 'transparent' : '#e6e6e6',
         }}
       >
+        <div style={{maxWidth: 1200, width: '100%', margin: '0 auto', padding: '0 24px'}}>
+          <img src={'/assets/img/hero.png'} alt="Hero" style={{width: '100%', borderRadius: '16px', objectFit: 'cover', minHeight: '200px', maxHeight: '350px'}} />
+        </div>
       </section>
       <div style={{maxWidth:1200, margin:'0 auto', padding:'0 24px'}}>
+
 
         {/* GRID DE LOGOS DE AUTOS DE ALTA GAMA */}
         <section style={{maxWidth:1100, margin:'0 auto', padding:'2.5rem 0 0 0', display:'flex', justifyContent:'center'}}>
@@ -140,9 +145,8 @@ export default function Home({ theme = 'dark' }) {
           </div>
         </section>
 
-        {/* GRID DE SERVICIOS MINIMALISTA */}
 
-       
+        {/* GRID DE SERVICIOS MINIMALISTA */}
 
         <section style={{maxWidth:1100, margin:'0 auto', padding:'3rem 0 1rem 0'}}>
           <div style={{
@@ -154,34 +158,36 @@ export default function Home({ theme = 'dark' }) {
               <div
                 key={serv.nombre}
                 style={{
-                  background: colors.cardBg,
-                  borderRadius: 14,
-                  boxShadow: '0 2px 12px #0003',
-                  padding: '1.5rem 1.3rem',
-                  minWidth: 210,
-                  flex: '1 1 240px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                  gap: '0.7rem',
-                  transition: 'background 0.3s',
-                }}
-                onMouseOver={e => {
-                  e.currentTarget.style.boxShadow = '0 0 10px 4px #fff9, 0 2px 10px #0002';
-                }}
-                onMouseOut={e => {
-                  e.currentTarget.style.boxShadow = '0 2px 14px #0002';
-                }}
-              >
-                <div style={{fontSize:'2.3rem', marginBottom:'0.5rem', color:'#e10600'}}>{serv.icono}</div>
-                <div style={{fontWeight:500, fontSize:'1.07rem', marginBottom:'0.45rem', letterSpacing:'-0.5px', color: colors.cardText}}>{serv.nombre}</div>
-                <div style={{fontSize:'0.98rem', color: colors.cardText, fontWeight:300, lineHeight:1.4}}>{serv.descripcion}</div>
-              </div>
-            ))}
-          </div>
-
-          
-        </section>
+          background: colors.cardBg,
+                borderRadius: 14,
+                boxShadow: '0 2px 12px #0003',
+                minWidth: 210,
+                flex: '1 1 240px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start',
+                gap: '0.7rem',
+                transition: 'background 0.3s',
+                overflow: 'hidden',
+                padding: 0,
+                border: '0.001px solid #e10600'
+        }}
+        onMouseOver={e => {
+          e.currentTarget.style.boxShadow = '0 0 10px 4px #fff9, 0 2px 10px #0002';
+        }}
+        onMouseOut={e => {
+          e.currentTarget.style.boxShadow = '0 2px 14px #0002';
+        }}
+      >
+        <img src={serv.img} alt={serv.nombre} style={{width:'100%', height:140, objectFit:'cover', borderTopLeftRadius:14, borderTopRightRadius:14, borderBottom:'1px solid #e0e0e0'}} />
+        <div style={{padding:'1.2rem 1.1rem 1.1rem 1.1rem', width:'100%'}}>
+          <div style={{fontWeight:500, fontSize:'1.07rem', marginBottom:'0.45rem', letterSpacing:'-0.5px', color: colors.cardText}}>{serv.nombre}</div>
+          <div style={{fontSize:'0.98rem', color: colors.cardText, fontWeight:300, lineHeight:1.4}}>{serv.descripcion}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
          {/* CONTACTO Y UBICACIÓN */}
          <section style={{maxWidth:1100, margin:'0 auto', padding:'3.5rem 0 1rem 0'}}>
